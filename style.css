@@ -1,0 +1,197 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Page background */
+body {
+    background-color: #0a0e1a;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1a1f3a, #0d1b2a);
+    border-bottom: 2px solid #2a3f6f;
+    padding: 40px 20px;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a90d9;
+    box-shadow: 0 0 20px rgba(74, 144, 217, 0.4);
+}
+
+.header-text h1 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #4a90d9;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Contact links */
+.contact-links {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-links a {
+    background-color: #1e2d4a;
+    color: #4a90d9;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #2a3f6f;
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+    background-color: #4a90d9;
+    color: white;
+}
+
+/* Main content */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Accordion container */
+.accordion {
+    margin-bottom: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #1e2d4a;
+}
+
+/* Accordion button */
+.accordion-btn {
+    width: 100%;
+    background-color: #111827;
+    color: white;
+    padding: 18px 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-btn:hover {
+    background-color: #1e2d4a;
+}
+
+.accordion-btn.active {
+    background-color: #1e2d4a;
+    border-bottom: 2px solid #4a90d9;
+}
+
+/* Arrow rotation when open */
+.arrow {
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    color: #4a90d9;
+}
+
+.accordion-btn.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Accordion content - hidden by default */
+.accordion-content {
+    display: none;
+    background-color: #0d1117;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Item inside accordion */
+.item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #1e2d4a;
+}
+
+.item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.item h4 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.item p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Skill grid */
+.skill-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.skill-item span {
+    width: 150px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Skill bar */
+.skill-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #1e2d4a;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4a90d9, #7b2ff7);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
